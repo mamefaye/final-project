@@ -41,8 +41,10 @@ export class HotelListComponent {
 
   public showBadge: boolean = false;
 
+  public hotelFilter = 'Mot';
+
   public toggleIsNewBadge() {
     this.showBadge = !this.showBadge;
   }
-  
+
 }
