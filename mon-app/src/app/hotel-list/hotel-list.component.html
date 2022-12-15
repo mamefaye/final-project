@@ -1,8 +1,13 @@
 <div class="container">
   <h2 *ngIf="hotels && hotels.length > 0">{{ title }}</h2>
 
-  <button class="btn btn-primary mb-2">
-    Afficher Nouveau
+  <button class="btn btn-primary mb-2 d-flex" (click)="toggleIsNewBadge()">
+    <span class="material-icons">
+      {{ showBadge ? "visibility_off" : "visibility" }}
+    </span>
+    <span class="ml-2">
+      {{ showBadge ? "Cacher" : "Afficher" }} - Nouveau
+    </span>
   </button>
 
   <div class="row row-cols-1 row-cols-md-3">
@@ -20,7 +25,9 @@
             {{ hotel.description }}
             <span class="badge badge-pill badge-info">{{ hotel.price }} $</span>
           </p>
-          <span class="badge badge-pill badge-info">Nouveau</span>
+          <span class="badge badge-pill badge-info" *ngIf="showBadge"
+            >Nouveau</span
+          >
         </div>
       </div>
     </div>

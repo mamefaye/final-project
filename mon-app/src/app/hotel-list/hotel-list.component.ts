@@ -38,4 +38,11 @@ export class HotelListComponent {
       imageUrl: 'assets/img/window.jpg',
     },
   ];
+
+  public showBadge: boolean = false;
+
+  public toggleIsNewBadge() {
+    this.showBadge = !this.showBadge;
+  }
+  
 }
