@@ -7,12 +7,14 @@ import localeFr from '@angular/common/locales/fr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { StartRatingComponent } from './start-rating/start-rating.component';
 
 registerLocaleData(localeFr, 'fr');
 @NgModule({
   declarations: [
     AppComponent,
-    HotelListComponent
+    HotelListComponent,
+    StartRatingComponent
   ],
   imports: [
     BrowserModule,
